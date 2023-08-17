@@ -1,21 +1,32 @@
 package com.knowit.gb.example.demo.model;
 
+import jakarta.persistence.Basic;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class Customer {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue
+	@Column(nullable = false)
 	private Long id;
-
+	@Basic(optional = false)
+	@Column(nullable = false)
 	private String firstName;
+	@Basic(optional = false)
+	@Column(nullable = false)
 	private String lastName;
+	@Basic(optional = false)
+	@Column(nullable = false)
 	private String adress;
+	@Basic(optional = false)
+	@Column(nullable = false)
 	private int zipCode;
+	@Basic(optional = false)
+	@Column(nullable = false)
 	private String country;
 
 	public Customer() {

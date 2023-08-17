@@ -35,4 +35,14 @@ public class CustomerController {
 	public ResponseEntity<List<Customer>> getCustomersByLastName(@PathVariable String lastname) {
 		return ResponseEntity.ok(customerRepository.findByLastName(lastname));
 	}
+
+	@GetMapping("/firstnamelike/{firstname}")
+	public ResponseEntity<List<Customer>> getCustomersByFirstNameLike(@PathVariable String firstname) {
+		return ResponseEntity.ok(customerRepository.findByFirstNameLike(firstname));
+	}
+
+	@GetMapping("/lastnamelike/{lastname}")
+	public ResponseEntity<List<Customer>> getCustomersByLastNameLike(@PathVariable String lastname) {
+		return ResponseEntity.ok(customerRepository.findByLastNameLike(lastname));
+	}
 }

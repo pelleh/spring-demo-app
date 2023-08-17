@@ -27,22 +27,22 @@ public class CustomerController {
 	}
 
 	@GetMapping("/firstnameeq/{firstname}")
-	public ResponseEntity<List<Customer>> getCustomersByFirstName(@PathVariable String firstname) {
-		return ResponseEntity.ok(customerRepository.findByFirstName(firstname));
+	public ResponseEntity<List<Customer>> getCustomersByFirstNameEquals(@PathVariable String firstname) {
+		return ResponseEntity.ok(customerRepository.findByFirstNameEquals(firstname));
 	}
 
 	@GetMapping("/lastnameeq/{lastname}")
-	public ResponseEntity<List<Customer>> getCustomersByLastName(@PathVariable String lastname) {
-		return ResponseEntity.ok(customerRepository.findByLastName(lastname));
+	public ResponseEntity<List<Customer>> getCustomersByLastNameEquals(@PathVariable String lastname) {
+		return ResponseEntity.ok(customerRepository.findByLastNameEquals(lastname));
 	}
 
 	@GetMapping("/firstname/{firstname}")
-	public ResponseEntity<List<Customer>> getCustomersByFirstNameLike(@PathVariable String firstname) {
+	public ResponseEntity<List<Customer>> getCustomersByFirstNameIgnoreCase(@PathVariable String firstname) {
 		return ResponseEntity.ok(customerRepository.findByFirstNameIgnoreCase(firstname));
 	}
 
 	@GetMapping("/lastname/{lastname}")
-	public ResponseEntity<List<Customer>> getCustomersByLastNameLike(@PathVariable String lastname) {
+	public ResponseEntity<List<Customer>> getCustomersByLastNameIgnoreCase(@PathVariable String lastname) {
 		return ResponseEntity.ok(customerRepository.findByLastNameIgnoreCase(lastname));
 	}
 }

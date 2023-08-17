@@ -8,8 +8,8 @@ import com.knowit.gb.example.demo.model.Customer;
 
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
-	List<Customer> findByFirstName(String firstname);
-	List<Customer> findByLastName(String lastname);
+	List<Customer> findByFirstNameEquals(String firstname);
+	List<Customer> findByLastNameEquals(String lastname);
 	List<Customer> findByFirstNameIgnoreCase(String firstname);
 	List<Customer> findByLastNameIgnoreCase(String lastname);
 }

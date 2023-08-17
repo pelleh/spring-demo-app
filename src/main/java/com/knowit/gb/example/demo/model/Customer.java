@@ -1,6 +1,5 @@
 package com.knowit.gb.example.demo.model;
 
-import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,20 +12,15 @@ public class Customer {
 	@GeneratedValue
 	@Column(nullable = false)
 	private Long id;
-	@Basic(optional = false)
-	@Column(nullable = false)
+	@Column(name="firstname", columnDefinition="VARCHAR(50) NOT NULL")
 	private String firstName;
-	@Basic(optional = false)
-	@Column(nullable = false)
+	@Column(name="lastname", columnDefinition="VARCHAR(75) NOT NULL")
 	private String lastName;
-	@Basic(optional = false)
-	@Column(nullable = false)
+	@Column(name="adress", columnDefinition="VARCHAR(100) NOT NULL")
 	private String adress;
-	@Basic(optional = false)
-	@Column(nullable = false)
+	@Column(name="zipcode", columnDefinition="INT(5) NOT NULL")
 	private int zipCode;
-	@Basic(optional = false)
-	@Column(nullable = false)
+	@Column(name="country", columnDefinition="VARCHAR(50) NOT NULL")
 	private String country;
 
 	public Customer() {

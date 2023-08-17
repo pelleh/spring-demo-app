@@ -18,6 +18,10 @@ public class Customer {
 	private int zipCode;
 	private String country;
 
+	public Customer() {
+		//
+	}
+
 	public Customer(Long id, String firstName, String lastName, String adress, int zipCode, String country) {
 		super();
 		this.id = id;

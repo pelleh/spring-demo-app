@@ -26,23 +26,23 @@ public class CustomerController {
 		return ResponseEntity.ok(customerRepository.findAll());
 	}
 
-	@GetMapping("/firstname/{firstname}")
+	@GetMapping("/firstnameeq/{firstname}")
 	public ResponseEntity<List<Customer>> getCustomersByFirstName(@PathVariable String firstname) {
 		return ResponseEntity.ok(customerRepository.findByFirstName(firstname));
 	}
 
-	@GetMapping("/lastname/{lastname}")
+	@GetMapping("/lastnameeq/{lastname}")
 	public ResponseEntity<List<Customer>> getCustomersByLastName(@PathVariable String lastname) {
 		return ResponseEntity.ok(customerRepository.findByLastName(lastname));
 	}
 
-	@GetMapping("/firstnamelike/{firstname}")
+	@GetMapping("/firstname/{firstname}")
 	public ResponseEntity<List<Customer>> getCustomersByFirstNameLike(@PathVariable String firstname) {
-		return ResponseEntity.ok(customerRepository.findByFirstNameLike(firstname));
+		return ResponseEntity.ok(customerRepository.findByFirstNameIgnoreCase(firstname));
 	}
 
-	@GetMapping("/lastnamelike/{lastname}")
+	@GetMapping("/lastname/{lastname}")
 	public ResponseEntity<List<Customer>> getCustomersByLastNameLike(@PathVariable String lastname) {
-		return ResponseEntity.ok(customerRepository.findByLastNameLike(lastname));
+		return ResponseEntity.ok(customerRepository.findByLastNameIgnoreCase(lastname));
 	}
 }

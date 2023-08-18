@@ -2,7 +2,7 @@ package com.knowit.gb.example.demo.configuration;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix="demo-datasource-properties")
+//@ConfigurationProperties(prefix="demo-datasource-properties")
 public class ConfigurationData {
 
 	private String jdbc;

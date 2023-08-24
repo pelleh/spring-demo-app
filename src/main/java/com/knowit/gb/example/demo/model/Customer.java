@@ -21,7 +21,7 @@ public class Customer {
 	private String adress;
 	@Column(name="zipcode", columnDefinition="VARCHAR(5) NOT NULL")
 	private String zipCode;
-	@Column(name="country", columnDefinition="VARCHAR(50) NOT NULL")
+	@Column(name="country", columnDefinition="VARCHAR(50) NOT NULL default 'Sweden'")
 	private String country;
 
 	public Customer() {

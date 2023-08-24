@@ -47,12 +47,12 @@ public class CustomerController {
 	}
 
 	@GetMapping("/zipcode/{zipcode}")
-	public ResponseEntity<List<Customer>> getCustomerByZipCode(@PathVariable int zipCode) {
-		return ResponseEntity.ok(customerRepository.findByZipCode(zipCode));
+	public ResponseEntity<List<Customer>> getCustomerByZipCodeContains(@PathVariable int zipCode) {
+		return ResponseEntity.ok(customerRepository.findByZipCodeContains(zipCode));
 	}
 
 	@GetMapping("/adress/{adress}")
-	public ResponseEntity<List<Customer>> findCustomerByAdress(@PathVariable String adress) {
-		return ResponseEntity.ok(customerRepository.findByAdressIgnoreCase(adress));
+	public ResponseEntity<List<Customer>> findCustomerByAdressLike(@PathVariable String adress) {
+		return ResponseEntity.ok(customerRepository.findByAdressLike("%" + adress + "%"));
 	}
 }

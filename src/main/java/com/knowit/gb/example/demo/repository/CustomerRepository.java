@@ -1,6 +1,5 @@
 package com.knowit.gb.example.demo.repository;
 
-import java.math.BigInteger;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -13,6 +12,6 @@ public interface CustomerRepository extends JpaRepository<Customer, Long> {
 	List<Customer> findByLastNameEquals(String lastname);
 	List<Customer> findByFirstNameIgnoreCase(String firstname);
 	List<Customer> findByLastNameIgnoreCase(String lastname);
-	List<Customer> findByZipCodeContains(BigInteger zipCode);
+	List<Customer> findByZipCodeContains(long zipCode);
 	List<Customer> findByAdressLike(String adress);
 }

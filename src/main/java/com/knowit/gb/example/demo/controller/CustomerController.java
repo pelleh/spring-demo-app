@@ -1,6 +1,5 @@
 package com.knowit.gb.example.demo.controller;
 
-import java.math.BigInteger;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
@@ -48,7 +47,7 @@ public class CustomerController {
 	}
 
 	@GetMapping("/zipcode/{zipcode}")
-	public ResponseEntity<List<Customer>> getCustomerByZipCodeContains(@PathVariable BigInteger zipCode) {
+	public ResponseEntity<List<Customer>> getCustomerByZipCodeContains(@PathVariable long zipCode) {
 		return ResponseEntity.ok(customerRepository.findByZipCodeContains(zipCode));
 	}
 

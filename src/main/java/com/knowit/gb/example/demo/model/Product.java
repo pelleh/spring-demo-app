@@ -13,9 +13,9 @@ public class Product {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(nullable = false)
 	private Long id;
-	@Column(columnDefinition="VARCHAR(50) NOT NULL")
+	@Column(name="name", columnDefinition="VARCHAR(50) NOT NULL")
 	private String name;
-	@Column(columnDefinition="VARCHAR(150) NOT NULL")
+	@Column(name="description", columnDefinition="VARCHAR(150) NOT NULL")
 	private String description;
 
 	public Product() {
@@ -23,7 +23,6 @@ public class Product {
 	}
 
 	public Product(Long id, String name, String description) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;

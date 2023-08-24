@@ -29,7 +29,6 @@ public class Customer {
 	}
 
 	public Customer(Long id, String firstName, String lastName, String adress, String zipCode, String country) {
-		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;

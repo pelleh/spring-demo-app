@@ -48,7 +48,7 @@ public class CustomerController {
 
 	@GetMapping("/zipcode/{zipcode}")
 	public ResponseEntity<List<Customer>> getCustomerByZipCodeContains(@PathVariable long zipcode) {
-		return ResponseEntity.ok(customerRepository.findByZipCodeContains(zipcode));
+		return ResponseEntity.ok(customerRepository.findByZipCodeBeginsWith(zipcode));
 	}
 
 	@GetMapping("/adress/{adress}")

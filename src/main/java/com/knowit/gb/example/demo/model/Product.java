@@ -1,5 +1,6 @@
 package com.knowit.gb.example.demo.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,10 +10,12 @@ import jakarta.persistence.Id;
 public class Product {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(nullable = false)
 	private Long id;
-
+	@Column(columnDefinition="VARCHAR(50) NOT NULL")
 	private String name;
+	@Column(columnDefinition="VARCHAR(150) NOT NULL")
 	private String description;
 
 	public Product() {

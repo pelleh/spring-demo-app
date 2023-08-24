@@ -28,16 +28,16 @@ public class ProductController {
 
 	@GetMapping("/name/{name}")
 	public ResponseEntity<List<Product>> findProductByName(@PathVariable String name) {
-		return ResponseEntity.ok(productRepository.findByNameContains(name));
+		return ResponseEntity.ok(productRepository.findByNameIgnoreCaseContains(name));
 	}
 
 	@GetMapping("/desc/{desc}")
 	public ResponseEntity<List<Product>> findProductByDesc(@PathVariable String desc) {
-		return ResponseEntity.ok(productRepository.findByDescriptionContains(desc));
+		return ResponseEntity.ok(productRepository.findByDescriptionIgnoreCaseContains(desc));
 	}
 
 	@GetMapping("/description/{desc}")
 	public ResponseEntity<List<Product>> findProductByDescription(@PathVariable String desc) {
-		return ResponseEntity.ok(productRepository.findByDescriptionContains(desc));
+		return ResponseEntity.ok(productRepository.findByDescriptionIgnoreCaseContains(desc));
 	}
 }

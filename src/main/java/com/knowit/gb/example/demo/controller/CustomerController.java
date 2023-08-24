@@ -45,4 +45,14 @@ public class CustomerController {
 	public ResponseEntity<List<Customer>> getCustomersByLastNameIgnoreCase(@PathVariable String lastname) {
 		return ResponseEntity.ok(customerRepository.findByLastNameIgnoreCase(lastname));
 	}
+
+	@GetMapping("/zipcode/{zipcode}")
+	public ResponseEntity<List<Customer>> getCustomerByZipcode(@PathVariable int zipcode) {
+		return ResponseEntity.ok(customerRepository.findByZipcode(zipcode));
+	}
+
+	@GetMapping("/adress/{adress}")
+	public ResponseEntity<List<Customer>> findCustomerByAdress(@PathVariable String adress) {
+		return ResponseEntity.ok(customerRepository.findByAdressIgnoreCase(adress));
+	}
 }

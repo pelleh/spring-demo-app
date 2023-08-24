@@ -47,8 +47,8 @@ public class CustomerController {
 	}
 
 	@GetMapping("/zipcode/{zipcode}")
-	public ResponseEntity<List<Customer>> getCustomerByZipcode(@PathVariable int zipcode) {
-		return ResponseEntity.ok(customerRepository.findByZipcode(zipcode));
+	public ResponseEntity<List<Customer>> getCustomerByZipCode(@PathVariable int zipCode) {
+		return ResponseEntity.ok(customerRepository.findByZipCode(zipCode));
 	}
 
 	@GetMapping("/adress/{adress}")

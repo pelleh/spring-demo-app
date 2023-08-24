@@ -19,7 +19,7 @@ public class Customer {
 	private String lastName;
 	@Column(name="adress", columnDefinition="VARCHAR(100) NOT NULL")
 	private String adress;
-	@Column(name="zipcode", columnDefinition="INTEGER NOT NULL")
+	@Column(name="zipcode", columnDefinition="VARCHAR(5) NOT NULL")
 	private int zipCode;
 	@Column(name="country", columnDefinition="VARCHAR(50) NOT NULL")
 	private String country;

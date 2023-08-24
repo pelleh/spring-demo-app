@@ -12,6 +12,6 @@ public interface CustomerRepository extends JpaRepository<Customer, Long> {
 	List<Customer> findByLastNameEquals(String lastname);
 	List<Customer> findByFirstNameIgnoreCase(String firstname);
 	List<Customer> findByLastNameIgnoreCase(String lastname);
-	List<Customer> findByZipCodeContains(long zipCode);
+	List<Customer> findByZipCodeContains(long zipcode);
 	List<Customer> findByAdressLike(String adress);
 }

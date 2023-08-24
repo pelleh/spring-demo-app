@@ -20,7 +20,7 @@ public class Customer {
 	@Column(name="adress", columnDefinition="VARCHAR(100) NOT NULL")
 	private String adress;
 	@Column(name="zipcode", columnDefinition="VARCHAR(5) NOT NULL")
-	private int zipCode;
+	private String zipCode;
 	@Column(name="country", columnDefinition="VARCHAR(50) NOT NULL")
 	private String country;
 
@@ -28,7 +28,7 @@ public class Customer {
 		//
 	}
 
-	public Customer(Long id, String firstName, String lastName, String adress, int zipCode, String country) {
+	public Customer(Long id, String firstName, String lastName, String adress, String zipCode, String country) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -70,11 +70,11 @@ public class Customer {
 		this.adress = adress;
 	}
 
-	public int getZipCode() {
+	public String getZipCode() {
 		return zipCode;
 	}
 
-	public void setZipCode(int zipCode) {
+	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
 	}
 
